@@ -4,10 +4,5 @@ spring:
     username: ${PGUSER}
     password: ${PGPASSWORD}
   jpa:
-    show-sql: true
-    open-in-view: false
     hibernate:
-      ddl-auto: create-drop # validate | update | create | create-drop
-    properties:
-      hibernate:
-        format_sql: true
+      ddl-auto: validate # validate | update | create | create-drop

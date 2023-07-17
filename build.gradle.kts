@@ -1,3 +1,8 @@
+/*
+ * This project was generated using the Spring Initializr. For more details, visit the following URL:
+ * https://start.spring.io/#!type=gradle-project-kotlin&language=kotlin&platformVersion=3.1.1&packaging=jar&jvmVersion=17&groupId=me.dio&artifactId=womens-world-cup-2023&name=womens-world-cup-2023&description=Women's%20World%20Cup%202023%20RESTful%20API&packageName=me.dio.wwc&dependencies=web,data-jpa,h2,postgresql
+ */
+
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
