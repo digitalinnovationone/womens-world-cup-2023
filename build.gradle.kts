@@ -39,10 +39,8 @@ tasks.withType<KotlinCompile> {
 	}
 }
 
-tasks.getByName<Jar>("bootJar") {
-	manifest {
-		attributes["Main-Class"] = "me.dio.wwc.ApplicationKt"
-	}
+tasks.jar {
+	manifest.attributes["Main-Class"] = "me.dio.wwc.Application"
 }
 
 tasks.withType<Test> {
