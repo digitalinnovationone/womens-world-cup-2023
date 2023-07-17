@@ -3,6 +3,8 @@ package me.dio.wwc.service.impl
 import me.dio.wwc.domain.model.Team
 import me.dio.wwc.domain.repository.TeamRepository
 import me.dio.wwc.service.TeamService
+import org.springframework.data.domain.Sort
+import org.springframework.data.domain.Sort.Direction
 import org.springframework.stereotype.Service
 import org.springframework.transaction.annotation.Transactional
 
@@ -11,7 +13,7 @@ class TeamServiceImpl(private val teamRepository: TeamRepository) : TeamService 
 
     @Transactional(readOnly = true)
     override fun findAll(): List<Team> {
-        return teamRepository.findAll()
+        return teamRepository.findAll(Sort.by(Direction.DESC, "score"))
     }
 
     @Transactional(readOnly = true)
