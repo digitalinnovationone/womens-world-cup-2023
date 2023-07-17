@@ -1,3 +1,5 @@
+-- FIFA Women's Ranking: https://www.fifa.com/fifa-world-ranking/women?dateId=ranking_20230609
+
 INSERT INTO tb_team (id, name, score) VALUES ('ARG', 'Argentina', 1682.45);
 INSERT INTO tb_team (id, name, score) VALUES ('AUS', 'Australia', 1919.69);
 INSERT INTO tb_team (id, name, score) VALUES ('BRA', 'Brazil', 1995.3);
