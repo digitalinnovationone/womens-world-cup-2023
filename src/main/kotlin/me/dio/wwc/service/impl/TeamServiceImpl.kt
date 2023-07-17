@@ -21,21 +21,21 @@ class TeamServiceImpl(private val teamRepository: TeamRepository) : TeamService 
 
     @Transactional
     override fun create(model: Team): Team {
-        if (teamRepository.existsById(model.abbreviation)) {
-            throw IllegalArgumentException("Team with abbreviation ${model.abbreviation} already exists")
+        if (teamRepository.existsById(model.id)) {
+            throw IllegalArgumentException("Team with abbreviation ${model.id} already exists")
         }
         return teamRepository.save(model)
     }
 
     @Transactional
     override fun update(id: String, model: Team): Team {
-        if (model.abbreviation != id) {
+        if (model.id != id) {
             throw IllegalArgumentException("The abbreviations to be updated must be the same")
         }
         val dbTeam = this.findById(id)
 
         dbTeam.name = model.name
-        dbTeam.fifaRanking = model.fifaRanking
+        dbTeam.score = model.score
 
         return teamRepository.save(dbTeam)
     }

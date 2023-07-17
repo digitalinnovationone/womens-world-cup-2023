@@ -47,7 +47,7 @@ class TeamController(private val teamService: TeamService) {
         val team = teamService.create(teamDto.toModel())
         val location = ServletUriComponentsBuilder.fromCurrentRequest()
                 .path("/{id}")
-                .buildAndExpand(team.abbreviation)
+                .buildAndExpand(team.id)
                 .toUri()
         return ResponseEntity.created(location).body(TeamDto.fromModel(team))
     }
