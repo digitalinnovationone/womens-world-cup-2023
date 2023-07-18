@@ -6,7 +6,6 @@ import io.swagger.v3.oas.annotations.responses.ApiResponses
 import io.swagger.v3.oas.annotations.tags.Tag
 import me.dio.wwc.controller.dto.TeamDto
 import me.dio.wwc.service.SimulateService
-import me.dio.wwc.service.TeamService
 import org.springframework.http.ResponseEntity
 import org.springframework.web.bind.annotation.GetMapping
 import org.springframework.web.bind.annotation.PathVariable
