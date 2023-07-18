@@ -1,6 +1,6 @@
 /*
  * This project was generated using the Spring Initializr. For more details, visit the following URL:
- * https://start.spring.io/#!type=gradle-project-kotlin&language=kotlin&platformVersion=3.1.1&packaging=jar&jvmVersion=17&groupId=me.dio&artifactId=womens-world-cup-2023&name=womens-world-cup-2023&description=Women's%20World%20Cup%202023%20RESTful%20API&packageName=me.dio.wwc&dependencies=web,data-jpa,h2,postgresql
+ * https://start.spring.io/#!type=gradle-project-kotlin&language=kotlin&platformVersion=3.1.1&packaging=jar&jvmVersion=17&groupId=me.dio&artifactId=womens-world-cup-2023&name=womens-world-cup-2023&description=Women's%20World%20Cup%202023%20RESTful%20API&packageName=me.dio.wwc&dependencies=web,data-jpa,h2
  */
 
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -24,15 +24,21 @@ repositories {
 	mavenCentral()
 }
 
+dependencyManagement {
+	imports {
+		mavenBom("org.springframework.cloud:spring-cloud-dependencies:2022.0.3")
+	}
+}
+
 dependencies {
 	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.cloud:spring-cloud-starter-openfeign")
 	implementation("org.springdoc:springdoc-openapi-starter-webmvc-ui:2.1.0")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 
 	runtimeOnly("com.h2database:h2")
-	runtimeOnly("org.postgresql:postgresql")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

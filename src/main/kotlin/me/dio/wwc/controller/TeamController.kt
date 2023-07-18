@@ -22,7 +22,7 @@ class TeamController(private val teamService: TeamService) {
     ])
     fun findAll(): ResponseEntity<List<TeamDto>> {
         val teams = teamService.findAll()
-        val teamsDto = teams.map { TeamDto.fromModel(it) }
+        val teamsDto = teams.map { TeamDto(it) }
         return ResponseEntity.ok(teamsDto)
     }
 
@@ -34,7 +34,7 @@ class TeamController(private val teamService: TeamService) {
     ])
     fun findById(@PathVariable abbreviation: String): ResponseEntity<TeamDto> {
         val team = teamService.findById(abbreviation)
-        return ResponseEntity.ok(TeamDto.fromModel(team))
+        return ResponseEntity.ok(TeamDto(team))
     }
 
     @PostMapping
@@ -49,7 +49,7 @@ class TeamController(private val teamService: TeamService) {
                 .path("/{id}")
                 .buildAndExpand(team.id)
                 .toUri()
-        return ResponseEntity.created(location).body(TeamDto.fromModel(team))
+        return ResponseEntity.created(location).body(TeamDto(team))
     }
 
     @PutMapping("/{id}")
@@ -61,7 +61,7 @@ class TeamController(private val teamService: TeamService) {
     ])
     fun update(@PathVariable abbreviation: String, @RequestBody teamDto: TeamDto): ResponseEntity<TeamDto> {
         val team = teamService.update(abbreviation, teamDto.toModel())
-        return ResponseEntity.ok(TeamDto.fromModel(team))
+        return ResponseEntity.ok(TeamDto(team))
     }
 
     @DeleteMapping("/{id}")
