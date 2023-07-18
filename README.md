@@ -126,6 +126,11 @@ acesse: [Documentação do Swagger](http://localhost:8080/swagger-ui/index.html#
 Este projeto está hospedado no Railway.app. Para acessar a aplicação,
 acesse: [URL da Aplicação](https://sua-url-de-hospedagem-aqui).
 
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Consulte o
+arquivo <a href="https://github.com/digitalinnovationone/womens-world-cup-2023/blob/main/LICENSE.md">(LICENSE)</a> para obter.
+
 ## Autores
 
 <table>
