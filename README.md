@@ -1,5 +1,9 @@
-<h1>womens-world-cup-2023</h1>
-<p>Este é um projeto que visa fornecer informações sobre a Copa do Mundo de Futebol Feminino de 2023. O projeto inclui uma API em Kotlin que permite o acesso aos dados das seleções participantes e integração com o ChatGPT-4 para simular as partidas da Copa e prever os resultados dos jogos.</p>
+# Women's World Cup 2023
+
+## DIO [Coding The Future #7](https://web.dio.me/lives/coding-the-future-7)
+
+Este é um projeto que visa fornecer informações sobre a Copa do Mundo de Futebol Feminino de 2023. O projeto inclui uma API em Kotlin que permite o acesso aos dados das seleções participantes e integração com o ChatGPT-4 para simular as partidas da Copa e prever os resultados dos jogos.
+
 <p align="center">
      <a alt="Java">
         <img src="https://img.shields.io/badge/Java-v17-blue.svg" />
@@ -34,8 +38,8 @@ Para integrar com o ChatGPT e usá-lo como um modelo para análise de sentimento
 
 Seguem alguns links úteis:
 
-1. Endpoint que vamos consumir: https://platform.openai.com/docs/api-reference/chat/create
-2. Collection Postman da OpenAI: https://www.postman.com/devrel/workspace/openai/documentation/13183464-90abb798-cb85-43cb-ba3a-ae7941e968da
+1. [Endpoint de Chat Completion](https://platform.openai.com/docs/api-reference/chat/create) (que vamos consumir)
+2. [Collection Postman da OpenAI](https://www.postman.com/devrel/workspace/openai/documentation/13183464-90abb798-cb85-43cb-ba3a-ae7941e968da) (útil pra entender todas as APIs da OpenAI)
 
 > Request
 
@@ -52,7 +56,7 @@ curl https://api.openai.com/v1/chat/completions \
 
 > Response
 
-```
+```json
 {
   "id": "chatcmpl-6p5FEv1JHictSSnDZsGU4KvbuBsbu",
   "object": "messages",
@@ -64,7 +68,7 @@ curl https://api.openai.com/v1/chat/completions \
       "finish_reason": "stop",
       "message": {
         "role": "assistant",
-        "content": "OpenAI's mission is to ensure that artificial general intelligence benefits all of humanity."
+        "content": "OpenAI's mission is to ensure that AI benefits all of humanity."
       }
     }
   ],
@@ -123,8 +127,8 @@ acesse: [Documentação do Swagger](http://localhost:8080/swagger-ui/index.html#
 
 ## Hospedagem no Railway.app
 
-Este projeto está hospedado no Railway.app. Para acessar a aplicação,
-acesse: [URL da Aplicação](https://sua-url-de-hospedagem-aqui).
+Durante a live hospedamos o projeto no Railway.app na seguinte URL: 
+[https://wwc-2023-prd.up.railway.app/swagger-ui.html](https://wwc-2023-prd.up.railway.app/swagger-ui.html)
 
 ## Licença
 
