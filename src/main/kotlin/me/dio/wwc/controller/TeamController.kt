@@ -32,8 +32,8 @@ class TeamController(private val teamService: TeamService) {
         ApiResponse(responseCode = "200", description = "Operation successful"),
         ApiResponse(responseCode = "404", description = "Team not found")
     ])
-    fun findById(@PathVariable abbreviation: String): ResponseEntity<TeamDto> {
-        val team = teamService.findById(abbreviation)
+    fun findById(@PathVariable id: String): ResponseEntity<TeamDto> {
+        val team = teamService.findById(id)
         return ResponseEntity.ok(TeamDto(team))
     }
 
