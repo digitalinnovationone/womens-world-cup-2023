@@ -9,8 +9,10 @@ import org.springframework.web.bind.annotation.RequestBody
 import org.springframework.web.bind.annotation.RequestHeader
 
 /**
- * OpenAI Postman Collection (coll reference):
- * https://www.postman.com/devrel/workspace/openai/collection/13183464-90abb798-cb85-43cb-ba3a-ae7941e968da
+ * Cool references from OpenAI ;)
+ *
+ * https://platform.openai.com/docs/api-reference/chat/create (API Documentation)
+ * https://www.postman.com/devrel/workspace/openai/collection/13183464-90abb798-cb85-43cb-ba3a-ae7941e968da (Postman)
  */
 @FeignClient(name = "openai", url = "https://api.openai.com/v1/")
 interface ChatGptService {
